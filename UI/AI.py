@@ -7,7 +7,7 @@ def get_data_from_gui():
 
     # Function to close the GUI after some time
     def close_gui():
-        time.sleep(10)  # Allow some time to interact with the GUI
+        time.sleep(100)  # Allow some time to interact with the GUI
         root.quit()  # Stop the GUI event loop
 
     # Start the GUI event loop in a separate thread
