@@ -19,7 +19,7 @@ def get_data_from_gui():
 
     # Retrieve the data after the GUI has been closed
     try:
-        data = app.get_data()
+        data = app.get_stored_data()
         print(f"Data retrieved: {data}")
         return data
     except RuntimeError as e:
