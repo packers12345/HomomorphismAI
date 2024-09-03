@@ -3,14 +3,14 @@ from StateBasedAlgorithm import HomomorphismSystem, determine_homomorphism
 # Define the mass-spring system
 states_mass_spring = {'rest', 'moving'}
 inputs_mass_spring = {0, 1}  # 0: no force, 1: force applied
-outputs_mass_spring = {0, 1}  # 0: compressed, 1: extended
+outputs_mass_spring = {0, 1}  # 0: motion, 1: no motion
 transitions_mass_spring = {('rest', 1): 'moving', ('moving', 0): 'rest'}
 behaviors_mass_spring = {'rest': 0, 'moving': 1}
 
 # Define the electrical circuit system
 states_circuit = {'off', 'on'}
-inputs_circuit = {0, 1}  # 0: switch off, 1: switch on
-outputs_circuit = {0, 1}  # 0: off, 1: on
+inputs_circuit = {0, 1}  # 0: no switch flip, 1: switch flip
+outputs_circuit = {0, 1}  # 0: current, 1: no current
 transitions_circuit = {('off', 1): 'on', ('on', 0): 'off'}
 behaviors_circuit = {'off': 0, 'on': 1}
 

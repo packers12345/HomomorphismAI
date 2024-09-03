@@ -15,7 +15,6 @@ behaviors_a = {
     'bright': 2
 }
 
-flashlight_a = HomomorphismSystem(states_a, inputs_a, outputs_a, transitions_a, behaviors_a)
 
 # Flashlight B: 2 states
 states_b = {'off', 'on'}
@@ -29,6 +28,9 @@ behaviors_b = {
     'off': 0,
     'on': 2
 }
+
+flashlight_a = HomomorphismSystem(states_a, inputs_a, outputs_a, transitions_a, behaviors_a)
+
 
 flashlight_b = HomomorphismSystem(states_b, inputs_b, outputs_b, transitions_b, behaviors_b)
 
