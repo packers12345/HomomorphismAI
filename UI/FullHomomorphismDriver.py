@@ -1,11 +1,11 @@
 from StateBasedAlgorithm import HomomorphismSystem, determine_homomorphism
 
 # Define the mass-spring system
-states_mass_spring = {'rest', 'compressed', 'extended'}
+states_mass_spring = {'rest', 'moving'}
 inputs_mass_spring = {0, 1}  # 0: no force, 1: force applied
-outputs_mass_spring = {0, 1, 2}  # 0: rest, 1: compressed, 2: extended
-transitions_mass_spring = {('rest', 1): 'compressed', ('compressed', 0): 'rest', ('compressed', 1): 'extended', ('extended', 0): 'compressed'}
-behaviors_mass_spring = {'rest': 0, 'compressed': 1, 'extended': 2}
+outputs_mass_spring = {0, 1}  # 0: compressed, 1: extended
+transitions_mass_spring = {('rest', 1): 'moving', ('moving', 0): 'rest'}
+behaviors_mass_spring = {'rest': 0, 'moving': 1}
 
 # Define the electrical circuit system
 states_circuit = {'off', 'on'}
@@ -22,6 +22,3 @@ circuit_system = HomomorphismSystem(states_circuit, inputs_circuit, outputs_circ
 degree_of_homomorphism, homomorphism_type = determine_homomorphism(mass_spring_system, circuit_system)
 print(f"Degree of Homomorphism: {degree_of_homomorphism}")
 print(f"Type of Homomorphism: {homomorphism_type}")
-
-def getHomomorphismVar(degree_of_homomorphism):
-        return degree_of_homomorphism
